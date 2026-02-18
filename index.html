@@ -3,98 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Jose</title>
+<title>Happy Birthday Jose 🎉</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Fun Comic Style Font -->
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap" rel="stylesheet">
 
 <style>
 
 body {
     margin: 0;
-    background: #0c111b;
-    color: #e6e6e6;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #16222a, #3a6073);
+    color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* Main Card */
+/* Main Content */
 .container {
-    max-width: 650px;
-    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 20px;
     animation: fadeIn 2s ease;
 }
 
-/* Title */
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #d4af37;
+    font-size: 3.5rem;
     margin-bottom: 10px;
+    animation: bounce 2s infinite alternate;
 }
 
-/* Subtitle */
 .subtitle {
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 40px;
+    font-size: 1.3rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
 }
 
-/* Message Text */
 .message {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
-    opacity: 0;
-    animation: fadeText 2s ease forwards;
-    animation-delay: 1.5s;
+    margin-top: 30px;
 }
 
-/* Scripture */
+/* Scripture Box */
 .scripture {
     margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     font-style: italic;
-    color: #d4af37;
-    opacity: 0;
-    animation: fadeText 2s ease forwards;
-    animation-delay: 3s;
 }
 
-/* Footer */
-.footer {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    color: #777;
-    opacity: 0;
-    animation: fadeText 2s ease forwards;
-    animation-delay: 4s;
+/* Blessing Button */
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: gold;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Divider */
-.divider {
-    width: 60px;
-    height: 2px;
-    background: #d4af37;
-    margin: 25px auto;
-    opacity: 0;
-    animation: fadeText 2s ease forwards;
-    animation-delay: 1s;
+button:hover {
+    transform: scale(1.1);
+    background: orange;
+}
+
+/* Hidden blessing */
+.hiddenBlessing {
+    margin-top: 25px;
+    display: none;
+    font-size: 1.2rem;
+    animation: fadeIn 1s ease;
+}
+
+/* Floating Confetti */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: gold;
+    top: -10px;
+    animation: fall linear infinite;
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
 }
 
-@keyframes fadeText {
-    to { opacity: 1; }
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes bounce {
+    from {transform: translateY(0);}
+    to {transform: translateY(-10px);}
 }
 
 </style>
@@ -104,35 +115,57 @@ h1 {
 
 <div class="container">
 
-    <h1>Happy Birthday Jose</h1>
-    <div class="subtitle">Friend • Pastor • Husband • Father</div>
+<h1>🎉 Happy Birthday Jose 🎉</h1>
 
-    <div class="divider"></div>
+<div class="subtitle">
+Amazing Friend • Pastor • Husband • Father
+</div>
 
-    <div class="message">
-        Thank you for being such a genuine and wonderful friend since 2022.<br><br>
+<div class="message">
+Thank you for being such a wonderful friend since 2022.<br><br>
 
-        Your leadership, kindness, and devotion to God continue to inspire everyone around you.
-        You are a blessing to your family, your church, and all who have the privilege of knowing you.<br><br>
+Your leadership, kindness, and love for God inspire everyone around you.
+You are truly a blessing to your wife, daughters, family, and the church you faithfully lead.<br><br>
 
-        I pray that God blesses you abundantly. May He strengthen your marriage, protect and guide your daughters,
-        uplift your family, and continue to expand your ministry.<br><br>
+May God bless you abundantly, strengthen your family, and guide every step of your journey.
+May He open every necessary door in your life and fill your home with joy, peace, and divine favor.
+</div>
 
-        May God open every door meant for you and fill your home with peace, joy, wisdom, and divine favor.
-    </div>
+<div class="scripture">
+“The Lord bless you and keep you;  
+The Lord make His face shine upon you and be gracious to you;  
+The Lord turn His face toward you and give you peace.”  
+— Numbers 6:24-26
+</div>
 
-    <div class="scripture">
-        “The Lord bless you and keep you;  
-        The Lord make His face shine upon you and be gracious to you;  
-        The Lord turn His face toward you and give you peace.”  
-        — Numbers 6:24-26
-    </div>
+<button onclick="showBlessing()">Click For A Birthday Blessing 🎁</button>
 
-    <div class="footer">
-        With appreciation and prayers 🙏🏾
-    </div>
+<div class="hiddenBlessing" id="blessing">
+May this new year bring laughter, wisdom, success, spiritual growth, and countless beautiful memories for you and your family 🙏🏾✨
+</div>
 
 </div>
+
+<script>
+
+/* Confetti generator */
+for (let i = 0; i < 60; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    confetti.style.background = ["gold", "white", "orange"][Math.floor(Math.random()*3)];
+
+    document.body.appendChild(confetti);
+}
+
+/* Blessing button */
+function showBlessing() {
+    document.getElementById("blessing").style.display = "block";
+}
+
+</script>
 
 </body>
 </html>
