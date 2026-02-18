@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Jose</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0a0f1c, #1a2a40);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        animation: fadeIn 2s ease;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #ffd369;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: 300;
+        margin-bottom: 20px;
+        color: #e8e8e8;
+    }
+
+    p {
+        line-height: 1.7;
+        font-size: 1.1rem;
+        color: #dcdcdc;
+    }
+
+    .scripture {
+        margin-top: 25px;
+        font-style: italic;
+        color: #ffd369;
+    }
+
+    footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    /* Floating celebration circles */
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 211, 105, 0.15);
+        animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+        from { transform: translateY(100vh); }
+        to { transform: translateY(-10vh); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Jose 🎉</h1>
+    <h2>A Wonderful Friend, Pastor, Husband & Father</h2>
+
+    <p>
+        Thank you for being such a great friend since 2022.  
+        Your kindness, leadership, and heart for God continue to inspire the people around you.
+    </p>
+
+    <p>
+        I celebrate the amazing man you are — a loving husband, a devoted father to your beautiful daughters,
+        and a dedicated servant of God leading His people faithfully.
+    </p>
+
+    <p>
+        May God bless you abundantly.  
+        May He strengthen your marriage, bless your children, uplift your family, and expand your ministry.
+    </p>
+
+    <p>
+        May every door that needs to open in your life open by God's divine favor.
+        May your home be filled with joy, peace, laughter, and endless grace.
+    </p>
+
+    <p class="scripture">
+        "The Lord bless you and keep you;  
+        The Lord make His face shine upon you and be gracious to you;  
+        The Lord turn His face toward you and give you peace."  
+        — Numbers 6:24-26
+    </p>
+
+    <footer>
+        With appreciation and prayers 🙏🏾
+    </footer>
+</div>
+
+<!-- Floating decorations -->
+<script>
+    for (let i = 0; i < 15; i++) {
+        let circle = document.createElement("div");
+        circle.classList.add("circle");
+
+        circle.style.width = circle.style.height = Math.random() * 60 + 20 + "px";
+        circle.style.left = Math.random() * 100 + "vw";
+        circle.style.animationDuration = Math.random() * 10 + 5 + "s";
+
+        document.body.appendChild(circle);
+    }
+</script>
+
+</body>
+</html>
