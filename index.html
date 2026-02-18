@@ -1,135 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Jose</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #0a0f1c, #1a2a40);
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        overflow: hidden;
-    }
 
-    .container {
-        max-width: 700px;
-        padding: 30px;
-        border-radius: 20px;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 25px rgba(0,0,0,0.5);
-        animation: fadeIn 2s ease;
-    }
+body {
+    margin: 0;
+    background: #0c111b;
+    color: #e6e6e6;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 3rem;
-        color: #ffd369;
-        margin-bottom: 10px;
-    }
+/* Main Card */
+.container {
+    max-width: 650px;
+    padding: 40px;
+    animation: fadeIn 2s ease;
+}
 
-    h2 {
-        font-weight: 300;
-        margin-bottom: 20px;
-        color: #e8e8e8;
-    }
+/* Title */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
 
-    p {
-        line-height: 1.7;
-        font-size: 1.1rem;
-        color: #dcdcdc;
-    }
+/* Subtitle */
+.subtitle {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 40px;
+}
 
-    .scripture {
-        margin-top: 25px;
-        font-style: italic;
-        color: #ffd369;
-    }
+/* Message Text */
+.message {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeText 2s ease forwards;
+    animation-delay: 1.5s;
+}
 
-    footer {
-        margin-top: 30px;
-        font-size: 0.9rem;
-        color: #aaa;
-    }
+/* Scripture */
+.scripture {
+    margin-top: 40px;
+    font-style: italic;
+    color: #d4af37;
+    opacity: 0;
+    animation: fadeText 2s ease forwards;
+    animation-delay: 3s;
+}
 
-    /* Floating celebration circles */
-    .circle {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 211, 105, 0.15);
-        animation: float 10s infinite linear;
-    }
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+    opacity: 0;
+    animation: fadeText 2s ease forwards;
+    animation-delay: 4s;
+}
 
-    @keyframes float {
-        from { transform: translateY(100vh); }
-        to { transform: translateY(-10vh); }
-    }
+/* Divider */
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    margin: 25px auto;
+    opacity: 0;
+    animation: fadeText 2s ease forwards;
+    animation-delay: 1s;
+}
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(40px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeText {
+    to { opacity: 1; }
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>🎉 Happy Birthday Jose 🎉</h1>
-    <h2>A Wonderful Friend, Pastor, Husband & Father</h2>
 
-    <p>
-        Thank you for being such a great friend since 2022.  
-        Your kindness, leadership, and heart for God continue to inspire the people around you.
-    </p>
+    <h1>Happy Birthday Jose</h1>
+    <div class="subtitle">Friend • Pastor • Husband • Father</div>
 
-    <p>
-        I celebrate the amazing man you are — a loving husband, a devoted father to your beautiful daughters,
-        and a dedicated servant of God leading His people faithfully.
-    </p>
+    <div class="divider"></div>
 
-    <p>
-        May God bless you abundantly.  
-        May He strengthen your marriage, bless your children, uplift your family, and expand your ministry.
-    </p>
+    <div class="message">
+        Thank you for being such a genuine and wonderful friend since 2022.<br><br>
 
-    <p>
-        May every door that needs to open in your life open by God's divine favor.
-        May your home be filled with joy, peace, laughter, and endless grace.
-    </p>
+        Your leadership, kindness, and devotion to God continue to inspire everyone around you.
+        You are a blessing to your family, your church, and all who have the privilege of knowing you.<br><br>
 
-    <p class="scripture">
-        "The Lord bless you and keep you;  
+        I pray that God blesses you abundantly. May He strengthen your marriage, protect and guide your daughters,
+        uplift your family, and continue to expand your ministry.<br><br>
+
+        May God open every door meant for you and fill your home with peace, joy, wisdom, and divine favor.
+    </div>
+
+    <div class="scripture">
+        “The Lord bless you and keep you;  
         The Lord make His face shine upon you and be gracious to you;  
-        The Lord turn His face toward you and give you peace."  
+        The Lord turn His face toward you and give you peace.”  
         — Numbers 6:24-26
-    </p>
+    </div>
 
-    <footer>
+    <div class="footer">
         With appreciation and prayers 🙏🏾
-    </footer>
+    </div>
+
 </div>
-
-<!-- Floating decorations -->
-<script>
-    for (let i = 0; i < 15; i++) {
-        let circle = document.createElement("div");
-        circle.classList.add("circle");
-
-        circle.style.width = circle.style.height = Math.random() * 60 + 20 + "px";
-        circle.style.left = Math.random() * 100 + "vw";
-        circle.style.animationDuration = Math.random() * 10 + 5 + "s";
-
-        document.body.appendChild(circle);
-    }
-</script>
 
 </body>
 </html>
